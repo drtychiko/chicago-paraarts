@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="only light">
 <title>Chicago ParaArts</title>
 <meta name="description" content="An integrated orchestra, theatre company, and music school in Chicago, built with disabled and non-disabled artists performing as equals.">
 
@@ -31,32 +32,15 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titan+One&family=Big+Shoulders+Display:wght@500;700;800&family=IBM+Plex+Mono:wght@500;600&display=swap">
 <style>
   :root{
+    color-scheme: only light;
     --bg:#ffffff; --surface:#ffffff; --surface-2:#f6f6f3;
     --ink:#15120d; --ink-soft:#4c4638; --ink-faint:#8b8268;
     --peach:#f6a56f; --teal:#00687a; --wine:#7a004b; --yellow:#ffde59;
     --rule: var(--ink); --rule-soft:#e1e1dc;
     --shadow-off: 5px 5px 0 var(--ink);
     --shadow-off-sm: 3px 3px 0 var(--ink);
-    /* stable brand swatches: constant across themes, for solid fills with fixed-contrast text */
+    /* stable brand swatches for solid fills with fixed-contrast text */
     --ink-fixed:#15120d; --ink-soft-fixed:#4c4638; --teal-fill:#00687a; --wine-fill:#7a004b; --purple-fill:#5b3a99;
-  }
-  @media (prefers-color-scheme: dark){
-    :root:not([data-theme="light"]){
-      --bg:#14100b; --surface:#1d1811; --surface-2:#241d14;
-      --ink:#f7f0dd; --ink-soft:#cdc2a4; --ink-faint:#8f8569;
-      --peach:#ffb37e; --teal:#35b7cc; --wine:#e0538f; --yellow:#ffe673;
-      --rule: var(--ink); --rule-soft:#3a3122;
-      --shadow-off: 5px 5px 0 var(--ink);
-      --shadow-off-sm: 3px 3px 0 var(--ink);
-    }
-  }
-  :root[data-theme="dark"]{
-    --bg:#14100b; --surface:#1d1811; --surface-2:#241d14;
-    --ink:#f7f0dd; --ink-soft:#cdc2a4; --ink-faint:#8f8569;
-    --peach:#ffb37e; --teal:#35b7cc; --wine:#e0538f; --yellow:#ffe673;
-    --rule: var(--ink); --rule-soft:#3a3122;
-    --shadow-off: 5px 5px 0 var(--ink);
-    --shadow-off-sm: 3px 3px 0 var(--ink);
   }
 
   *{ box-sizing: border-box; }
@@ -137,8 +121,6 @@
   main{ padding: 0 20px; }
   .page{ display:none; padding: 48px 0 20px; position:relative; }
   .bg-squiggle{ position:absolute; z-index:0; pointer-events:none; opacity:0.55; }
-  @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .bg-squiggle{ opacity:0.4; } }
-  :root[data-theme="dark"] .bg-squiggle{ opacity:0.4; }
   @media (max-width: 720px){ .bg-squiggle{ display:none; } }
   .page.active{ display:block; animation: fade 0.25s ease; }
   @keyframes fade{ from{opacity:0; transform: translateY(4px);} to{opacity:1; transform:none;} }
